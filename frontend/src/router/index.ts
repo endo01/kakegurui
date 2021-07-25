@@ -24,6 +24,27 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
+    path: "/home",
+    component: Page404Layout,
+    children: [
+      {
+        name: "home",
+        path: "",
+        component: () => import("@/pages/home/index.vue")
+      },
+      {
+        name: "create",
+        path: "create",
+        component: () => import("@/pages/home/index.vue")
+      },
+      {
+        name: "join",
+        path: "join",
+        component: () => import("@/pages/home/index.vue")
+      }
+    ]
+  },
+  {
     name: "admin",
     path: "/admin",
     component: AppLayout,
